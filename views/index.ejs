@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube downloader</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Downloader container -->
+    <div class="downloader__container">
+      <!-- Input section -->
+      <div class="input__section">
+        <h3>Youtube Downloader</h3>
+        <div class="input__group">
+          <input
+            id="videoUrl"
+            type="text"
+            placeholder="Enter youtube video url"
+            spellcheck="false"
+            autocomplete="off"
+          />
+          <button id="generate">Generate</button>
+        </div>
+      </div>
+
+      <!-- Loading section -->
+      <div class="loading__section">
+        <img
+          src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif"
+          alt=""
+        />
+      </div>
+
+      <!-- Error section -->
+      <div class="error__section">
+        <h3></h3>
+      </div>
+
+      <!-- Output section -->
+      <div class="output__section">
+        <!-- Output left -->
+        <div class="output__left">
+          <img id="poster" src="" alt="" />
+          <div class="output__details">
+            <h3 id="title">Title gone here</h3>
+            <p id="duration"></p>
+            <p id="channel"></p>
+            <p id="upload"></p>
+            <p id="view"></p>
+          </div>
+        </div>
+        <!-- Output details -->
+        <div class="output__right">
+          <h3>Available download format</h3>
+          <p>Click on download button & enjoy your video</p>
+          <table>
+            <tbody>
+              <tr>
+                <th>Format</th>
+                <th>Type</th>
+                <th>Size</th>
+                <th>Action</th>
+              </tr>
+            </tbody>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
