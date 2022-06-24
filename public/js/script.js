@@ -82,9 +82,7 @@ const fetchVideoInfo = async (videoUrlValue) => {
   try {
     pending();
     const videoId = vid_id_from_url(videoUrlValue);
-    const res = await fetch(
-      `https://rimon-yt-downloader.herokuapp.com/info/${videoId}`
-    );
+    const res = await fetch(`http://localhost:8080/info/${videoId}`);
     const data = await res.json();
     const { videoDetails, formats } = data;
 
@@ -109,7 +107,7 @@ const fetchVideoInfo = async (videoUrlValue) => {
           <td>${qualityLabel}</td>
           <td>${container}</td>
           <td>${formatBytes(Number(contentLength))}</td>
-          <td><a href="https://rimon-yt-downloader.herokuapp.com/download/${videoTitle}/${videoId}/${itag}">Download</a></td>
+          <td><a href="/download/${videoTitle}/${videoId}/${itag}">Download</a></td>
         </tr>
         `;
       }
